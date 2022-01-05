@@ -74,6 +74,7 @@ namespace CET301_Project
             this.buttonStudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStudents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonStudents.UseVisualStyleBackColor = true;
+            this.buttonStudents.Click += new System.EventHandler(this.buttonStudents_Click);
             // 
             // IconsList
             // 
@@ -90,6 +91,7 @@ namespace CET301_Project
             this.buttonHistory.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHistory.ForeColor = System.Drawing.Color.Black;
             this.buttonHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHistory.ImageIndex = 2;
             this.buttonHistory.ImageList = this.IconsList;
@@ -102,12 +104,14 @@ namespace CET301_Project
             this.buttonHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonHistory.UseVisualStyleBackColor = true;
+            this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
             // 
             // buttonAuthors
             // 
             this.buttonAuthors.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonAuthors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAuthors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAuthors.ForeColor = System.Drawing.Color.Black;
             this.buttonAuthors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAuthors.ImageIndex = 0;
             this.buttonAuthors.ImageList = this.IconsList;
@@ -120,12 +124,14 @@ namespace CET301_Project
             this.buttonAuthors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAuthors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAuthors.UseVisualStyleBackColor = true;
+            this.buttonAuthors.Click += new System.EventHandler(this.buttonAuthors_Click);
             // 
             // buttonBooks
             // 
             this.buttonBooks.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBooks.ForeColor = System.Drawing.Color.Black;
             this.buttonBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBooks.ImageIndex = 1;
             this.buttonBooks.ImageList = this.IconsList;
@@ -138,12 +144,15 @@ namespace CET301_Project
             this.buttonBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonBooks.UseVisualStyleBackColor = true;
+            this.buttonBooks.Click += new System.EventHandler(this.buttonBooks_Click);
             // 
             // buttonTypes
             // 
+            this.buttonTypes.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonTypes.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTypes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTypes.ForeColor = System.Drawing.Color.Black;
             this.buttonTypes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTypes.ImageIndex = 4;
             this.buttonTypes.ImageList = this.IconsList;
@@ -155,7 +164,8 @@ namespace CET301_Project
             this.buttonTypes.Text = " Types";
             this.buttonTypes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTypes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTypes.UseVisualStyleBackColor = true;
+            this.buttonTypes.UseVisualStyleBackColor = false;
+            this.buttonTypes.Click += new System.EventHandler(this.buttonTypes_Click);
             // 
             // MenuHeading
             // 
