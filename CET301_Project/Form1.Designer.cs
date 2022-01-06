@@ -39,12 +39,18 @@ namespace CET301_Project
             this.buttonBooks = new System.Windows.Forms.Button();
             this.buttonTypes = new System.Windows.Forms.Button();
             this.MenuHeading = new System.Windows.Forms.Panel();
+            this.appLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pagePanel = new System.Windows.Forms.Panel();
+            this.pagePanelLabel = new System.Windows.Forms.Label();
             this.Menu.SuspendLayout();
+            this.MenuHeading.SuspendLayout();
+            this.pagePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menu
             // 
-            this.Menu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Menu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Menu.Controls.Add(this.buttonStudents);
             this.Menu.Controls.Add(this.buttonHistory);
             this.Menu.Controls.Add(this.buttonAuthors);
@@ -59,6 +65,7 @@ namespace CET301_Project
             // 
             // buttonStudents
             // 
+            this.buttonStudents.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonStudents.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,7 +80,7 @@ namespace CET301_Project
             this.buttonStudents.Text = " Students";
             this.buttonStudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStudents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonStudents.UseVisualStyleBackColor = true;
+            this.buttonStudents.UseVisualStyleBackColor = false;
             this.buttonStudents.Click += new System.EventHandler(this.buttonStudents_Click);
             // 
             // IconsList
@@ -88,6 +95,7 @@ namespace CET301_Project
             // 
             // buttonHistory
             // 
+            this.buttonHistory.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonHistory.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,11 +111,12 @@ namespace CET301_Project
             this.buttonHistory.Text = " Borrowing History";
             this.buttonHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHistory.UseVisualStyleBackColor = true;
+            this.buttonHistory.UseVisualStyleBackColor = false;
             this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
             // 
             // buttonAuthors
             // 
+            this.buttonAuthors.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonAuthors.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonAuthors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAuthors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,11 +132,12 @@ namespace CET301_Project
             this.buttonAuthors.Text = " Authors";
             this.buttonAuthors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAuthors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAuthors.UseVisualStyleBackColor = true;
+            this.buttonAuthors.UseVisualStyleBackColor = false;
             this.buttonAuthors.Click += new System.EventHandler(this.buttonAuthors_Click);
             // 
             // buttonBooks
             // 
+            this.buttonBooks.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonBooks.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,7 +153,7 @@ namespace CET301_Project
             this.buttonBooks.Text = " Books";
             this.buttonBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonBooks.UseVisualStyleBackColor = true;
+            this.buttonBooks.UseVisualStyleBackColor = false;
             this.buttonBooks.Click += new System.EventHandler(this.buttonBooks_Click);
             // 
             // buttonTypes
@@ -170,21 +180,68 @@ namespace CET301_Project
             // MenuHeading
             // 
             this.MenuHeading.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.MenuHeading.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MenuHeading.Controls.Add(this.appLabel);
+            this.MenuHeading.Controls.Add(this.panel1);
             this.MenuHeading.Dock = System.Windows.Forms.DockStyle.Top;
             this.MenuHeading.Location = new System.Drawing.Point(0, 0);
             this.MenuHeading.Name = "MenuHeading";
             this.MenuHeading.Size = new System.Drawing.Size(200, 80);
             this.MenuHeading.TabIndex = 1;
             // 
+            // appLabel
+            // 
+            this.appLabel.AutoSize = true;
+            this.appLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.appLabel.Location = new System.Drawing.Point(58, 26);
+            this.appLabel.Name = "appLabel";
+            this.appLabel.Size = new System.Drawing.Size(92, 20);
+            this.appLabel.TabIndex = 2;
+            this.appLabel.Text = "LibManSys";
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(196, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(602, 80);
+            this.panel1.TabIndex = 1;
+            // 
+            // pagePanel
+            // 
+            this.pagePanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pagePanel.Controls.Add(this.pagePanelLabel);
+            this.pagePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pagePanel.Location = new System.Drawing.Point(200, 0);
+            this.pagePanel.Name = "pagePanel";
+            this.pagePanel.Size = new System.Drawing.Size(600, 80);
+            this.pagePanel.TabIndex = 1;
+            // 
+            // pagePanelLabel
+            // 
+            this.pagePanelLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pagePanelLabel.AutoSize = true;
+            this.pagePanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.pagePanelLabel.Location = new System.Drawing.Point(244, 26);
+            this.pagePanelLabel.Name = "pagePanelLabel";
+            this.pagePanelLabel.Size = new System.Drawing.Size(88, 29);
+            this.pagePanelLabel.TabIndex = 0;
+            this.pagePanelLabel.Text = "HOME";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pagePanel);
             this.Controls.Add(this.Menu);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Menu.ResumeLayout(false);
+            this.MenuHeading.ResumeLayout(false);
+            this.MenuHeading.PerformLayout();
+            this.pagePanel.ResumeLayout(false);
+            this.pagePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -199,6 +256,10 @@ namespace CET301_Project
         private System.Windows.Forms.Button buttonAuthors;
         private System.Windows.Forms.Button buttonBooks;
         private System.Windows.Forms.Button buttonTypes;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pagePanel;
+        private System.Windows.Forms.Label pagePanelLabel;
+        private System.Windows.Forms.Label appLabel;
     }
 }
 

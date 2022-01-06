@@ -31,12 +31,18 @@ namespace CET301_Project
             // with while if the color has already been selected, we select again to choose a different one
             while(tempIndex == index)
             {
-                random.Next(Colors.ColorsList.Count);
+               index = random.Next(Colors.ColorsList.Count); //by adding index = we create infinite loop
             }
             tempIndex = index;
             string color = Colors.ColorsList[index];
             return ColorTranslator.FromHtml(color);
         }
+
+        // activatebutton:
+        // 1. select random color for the theme. 
+        //change the background color of the button
+        // change the font color of the button
+        // change the font size o the button
 
         private void ActivateButton(object btnSender)
         {
@@ -50,10 +56,14 @@ namespace CET301_Project
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))); // by activating we highlighting the button font size bigger.
+                    pagePanel.BackColor = color;
+                    MenuHeading.BackColor = color;
+
                 }
             }
         }
 
+        //change button back to default value
         private void DiactivateButton()
         {
             foreach(Control previousBtn in Menu.Controls)
