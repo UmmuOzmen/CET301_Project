@@ -43,6 +43,7 @@ namespace CET301_Project
             this.panel1 = new System.Windows.Forms.Panel();
             this.pagePanel = new System.Windows.Forms.Panel();
             this.pagePanelLabel = new System.Windows.Forms.Label();
+            this.MainPagePanel = new System.Windows.Forms.Panel();
             this.Menu.SuspendLayout();
             this.MenuHeading.SuspendLayout();
             this.pagePanel.SuspendLayout();
@@ -227,12 +228,22 @@ namespace CET301_Project
             this.pagePanelLabel.TabIndex = 0;
             this.pagePanelLabel.Text = "HOME";
             // 
+            // MainPagePanel
+            // 
+            this.MainPagePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MainPagePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPagePanel.Location = new System.Drawing.Point(200, 80);
+            this.MainPagePanel.Name = "MainPagePanel";
+            this.MainPagePanel.Size = new System.Drawing.Size(600, 370);
+            this.MainPagePanel.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MainPagePanel);
             this.Controls.Add(this.pagePanel);
             this.Controls.Add(this.Menu);
             this.Name = "Form1";
@@ -260,6 +271,7 @@ namespace CET301_Project
         private System.Windows.Forms.Panel pagePanel;
         private System.Windows.Forms.Label pagePanelLabel;
         private System.Windows.Forms.Label appLabel;
+        private System.Windows.Forms.Panel MainPagePanel;
     }
 }
 

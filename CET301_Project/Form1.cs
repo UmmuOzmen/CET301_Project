@@ -16,6 +16,7 @@ namespace CET301_Project
         private Button currentButton;
         private Random random;
         private int tempIndex;
+        private Form activeForm;
 
         //Constructor
         public Form1()
@@ -58,7 +59,7 @@ namespace CET301_Project
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))); // by activating we highlighting the button font size bigger.
                     pagePanel.BackColor = color;
                     MenuHeading.BackColor = color;
-
+ 
                 }
             }
         }
@@ -80,29 +81,48 @@ namespace CET301_Project
             }
         }
 
+        // a method to open the forms in the container panel
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            ActivateButton(btnSender); //highlight the button
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.MainPagePanel.Controls.Add(childForm);
+            this.MainPagePanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            pagePanelLabel.Text = childForm.Text;
+        }
+
         private void buttonTypes_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.FormTypes(), sender);
         }
 
         private void buttonBooks_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.FormBooks(), sender);
         }
 
         private void buttonAuthors_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.FormAuthors(), sender);
         }
 
         private void buttonHistory_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.FormBorrowingHistory(), sender);
         }
 
         private void buttonStudents_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.FormStudents(), sender);
         }
     }
 }
