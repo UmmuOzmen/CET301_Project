@@ -23,6 +23,7 @@ namespace CET301_Project
         {
             InitializeComponent();
             random = new Random();
+            CloseForm.Visible = false;
         }
 
         //Methods
@@ -30,9 +31,9 @@ namespace CET301_Project
         {
             int index = random.Next(Colors.ColorsList.Count);
             // with while if the color has already been selected, we select again to choose a different one
-            while(tempIndex == index)
+            while (tempIndex == index)
             {
-               index = random.Next(Colors.ColorsList.Count); //by adding index = we create infinite loop
+                index = random.Next(Colors.ColorsList.Count); //by adding index = we create infinite loop
             }
             tempIndex = index;
             string color = Colors.ColorsList[index];
@@ -59,7 +60,8 @@ namespace CET301_Project
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))); // by activating we highlighting the button font size bigger.
                     pagePanel.BackColor = color;
                     MenuHeading.BackColor = color;
- 
+                    CloseForm.Visible = true;
+
                 }
             }
         }
@@ -67,7 +69,7 @@ namespace CET301_Project
         //change button back to default value
         private void DiactivateButton()
         {
-            foreach(Control previousBtn in Menu.Controls)
+            foreach (Control previousBtn in Menu.Controls)
             {
                 if (previousBtn.GetType() == typeof(Button))
                 {
@@ -75,9 +77,9 @@ namespace CET301_Project
                     previousBtn.ForeColor = Color.Black;
                     previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
-                    
 
-                
+
+
             }
         }
 
@@ -123,6 +125,24 @@ namespace CET301_Project
         private void buttonStudents_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormStudents(), sender);
+        }
+
+        private void CloseForm_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            Reset();
+        }
+        private void Reset()
+        {
+            DiactivateButton();
+            pagePanelLabel.Text = "HOME";
+            pagePanel.BackColor = SystemColors.GradientActiveCaption;
+            MenuHeading.BackColor = SystemColors.GradientActiveCaption;
+            currentButton = null;
+            CloseForm.Visible = false;
         }
     }
 }

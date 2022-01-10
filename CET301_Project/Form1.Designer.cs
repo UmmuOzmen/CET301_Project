@@ -44,6 +44,7 @@ namespace CET301_Project
             this.pagePanel = new System.Windows.Forms.Panel();
             this.pagePanelLabel = new System.Windows.Forms.Label();
             this.MainPagePanel = new System.Windows.Forms.Panel();
+            this.CloseForm = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.MenuHeading.SuspendLayout();
             this.pagePanel.SuspendLayout();
@@ -210,6 +211,7 @@ namespace CET301_Project
             // pagePanel
             // 
             this.pagePanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pagePanel.Controls.Add(this.CloseForm);
             this.pagePanel.Controls.Add(this.pagePanelLabel);
             this.pagePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pagePanel.Location = new System.Drawing.Point(200, 0);
@@ -236,6 +238,16 @@ namespace CET301_Project
             this.MainPagePanel.Name = "MainPagePanel";
             this.MainPagePanel.Size = new System.Drawing.Size(600, 370);
             this.MainPagePanel.TabIndex = 2;
+            // 
+            // CloseForm
+            // 
+            this.CloseForm.Location = new System.Drawing.Point(552, 5);
+            this.CloseForm.Name = "CloseForm";
+            this.CloseForm.Size = new System.Drawing.Size(45, 32);
+            this.CloseForm.TabIndex = 1;
+            this.CloseForm.Text = "X";
+            this.CloseForm.UseVisualStyleBackColor = true;
+            this.CloseForm.Click += new System.EventHandler(this.CloseForm_Click);
             // 
             // Form1
             // 
@@ -272,6 +284,7 @@ namespace CET301_Project
         private System.Windows.Forms.Label pagePanelLabel;
         private System.Windows.Forms.Label appLabel;
         private System.Windows.Forms.Panel MainPagePanel;
+        private System.Windows.Forms.Button CloseForm;
     }
 }
 
