@@ -43,6 +43,7 @@ namespace CET301_Project.Forms
             this.button1.TabIndex = 0;
             this.button1.Text = "Types";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ShowTypesLabel
             // 
@@ -76,6 +77,7 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.button1);
             this.Name = "FormTypes";
             this.Text = "FormTypes";
+            this.Load += new System.EventHandler(this.FormTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTypes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

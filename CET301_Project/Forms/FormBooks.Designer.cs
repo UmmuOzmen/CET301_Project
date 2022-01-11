@@ -65,6 +65,7 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.button1);
             this.Name = "FormBooks";
             this.Text = "FormBooks";
+            this.Load += new System.EventHandler(this.FormBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).EndInit();
             this.ResumeLayout(false);
 

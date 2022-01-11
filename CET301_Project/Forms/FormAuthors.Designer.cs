@@ -62,6 +62,7 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.button1);
             this.Name = "FormAuthors";
             this.Text = "FormAuthors";
+            this.Load += new System.EventHandler(this.FormAuthors_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthors)).EndInit();
             this.ResumeLayout(false);
 

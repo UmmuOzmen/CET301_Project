@@ -52,6 +52,7 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.dataGridViewBorrows);
             this.Name = "FormBorrowingHistory";
             this.Text = "FormBorrowingHistory";
+            this.Load += new System.EventHandler(this.FormBorrow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBorrows)).EndInit();
             this.ResumeLayout(false);
 

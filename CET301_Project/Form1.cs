@@ -27,8 +27,9 @@ namespace CET301_Project
             CloseForm.Visible = false;
         }
 
-        public string connectToDB =  " ";
+        SqlConnection connectToDB = new SqlConnection("Data Source=DESKTOP-178E3AR;Initial Catalog=library;Integrated Security=True");
 
+       
         //Methods
         private Color SelectColors()
         {
