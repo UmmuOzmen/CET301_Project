@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CET301_Project
 {
@@ -25,6 +26,8 @@ namespace CET301_Project
             random = new Random();
             CloseForm.Visible = false;
         }
+
+        public string connectToDB =  " ";
 
         //Methods
         private Color SelectColors()

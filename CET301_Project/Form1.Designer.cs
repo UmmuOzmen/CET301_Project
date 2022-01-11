@@ -42,9 +42,9 @@ namespace CET301_Project
             this.appLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pagePanel = new System.Windows.Forms.Panel();
+            this.CloseForm = new System.Windows.Forms.Button();
             this.pagePanelLabel = new System.Windows.Forms.Label();
             this.MainPagePanel = new System.Windows.Forms.Panel();
-            this.CloseForm = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.MenuHeading.SuspendLayout();
             this.pagePanel.SuspendLayout();
@@ -219,6 +219,17 @@ namespace CET301_Project
             this.pagePanel.Size = new System.Drawing.Size(600, 80);
             this.pagePanel.TabIndex = 1;
             // 
+            // CloseForm
+            // 
+            this.CloseForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CloseForm.Location = new System.Drawing.Point(555, 0);
+            this.CloseForm.Name = "CloseForm";
+            this.CloseForm.Size = new System.Drawing.Size(45, 80);
+            this.CloseForm.TabIndex = 1;
+            this.CloseForm.Text = "X";
+            this.CloseForm.UseVisualStyleBackColor = true;
+            this.CloseForm.Click += new System.EventHandler(this.CloseForm_Click);
+            // 
             // pagePanelLabel
             // 
             this.pagePanelLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -238,16 +249,6 @@ namespace CET301_Project
             this.MainPagePanel.Name = "MainPagePanel";
             this.MainPagePanel.Size = new System.Drawing.Size(600, 370);
             this.MainPagePanel.TabIndex = 2;
-            // 
-            // CloseForm
-            // 
-            this.CloseForm.Location = new System.Drawing.Point(552, 5);
-            this.CloseForm.Name = "CloseForm";
-            this.CloseForm.Size = new System.Drawing.Size(45, 32);
-            this.CloseForm.TabIndex = 1;
-            this.CloseForm.Text = "X";
-            this.CloseForm.UseVisualStyleBackColor = true;
-            this.CloseForm.Click += new System.EventHandler(this.CloseForm_Click);
             // 
             // Form1
             // 
