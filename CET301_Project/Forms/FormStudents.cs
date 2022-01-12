@@ -23,7 +23,7 @@ namespace CET301_Project.Forms
         {
             SqlCommand command = new SqlCommand();
             command.Connection = connectToDB;
-            command.CommandText = "SELECT * FROM types";
+            command.CommandText = "SELECT * FROM students";
 
             DataTable data = new DataTable();
 
@@ -31,6 +31,16 @@ namespace CET301_Project.Forms
             adapter.Fill(data);
 
             dataGridViewStudents.DataSource = data;
+        }
+
+        private void labelBirthDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

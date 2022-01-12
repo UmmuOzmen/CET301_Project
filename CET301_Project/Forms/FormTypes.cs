@@ -45,5 +45,10 @@ namespace CET301_Project.Forms
             dataGridViewTypes.DataSource = data;
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

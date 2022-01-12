@@ -29,52 +29,98 @@ namespace CET301_Project.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.ShowTypesLabel = new System.Windows.Forms.Label();
+            this.buttonAdd = new System.Windows.Forms.Button();
             this.dataGridViewTypes = new System.Windows.Forms.DataGridView();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.labelId = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelTypeName = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTypes)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonAdd
             // 
-            this.button1.Location = new System.Drawing.Point(32, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Types";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ShowTypesLabel
-            // 
-            this.ShowTypesLabel.AutoSize = true;
-            this.ShowTypesLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ShowTypesLabel.Location = new System.Drawing.Point(358, 63);
-            this.ShowTypesLabel.Name = "ShowTypesLabel";
-            this.ShowTypesLabel.Size = new System.Drawing.Size(135, 17);
-            this.ShowTypesLabel.TabIndex = 1;
-            this.ShowTypesLabel.Text = "Categories of Books";
-            this.ShowTypesLabel.Click += new System.EventHandler(this.label1_Click);
+            this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAdd.Location = new System.Drawing.Point(261, 91);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(97, 23);
+            this.buttonAdd.TabIndex = 0;
+            this.buttonAdd.Text = "Add";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewTypes
             // 
-            this.dataGridViewTypes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewTypes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewTypes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTypes.Location = new System.Drawing.Point(351, 93);
+            this.dataGridViewTypes.Location = new System.Drawing.Point(398, 93);
             this.dataGridViewTypes.Name = "dataGridViewTypes";
             this.dataGridViewTypes.RowHeadersWidth = 51;
             this.dataGridViewTypes.RowTemplate.Height = 24;
-            this.dataGridViewTypes.Size = new System.Drawing.Size(428, 345);
+            this.dataGridViewTypes.Size = new System.Drawing.Size(280, 345);
             this.dataGridViewTypes.TabIndex = 2;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonDelete.Location = new System.Drawing.Point(261, 120);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(97, 23);
+            this.buttonDelete.TabIndex = 0;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // labelId
+            // 
+            this.labelId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelId.Location = new System.Drawing.Point(58, 90);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(37, 23);
+            this.labelId.TabIndex = 3;
+            this.labelId.Text = "ID :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(92, 90);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 22);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // labelTypeName
+            // 
+            this.labelTypeName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTypeName.Location = new System.Drawing.Point(-2, 122);
+            this.labelTypeName.Name = "labelTypeName";
+            this.labelTypeName.Size = new System.Drawing.Size(100, 23);
+            this.labelTypeName.TabIndex = 3;
+            this.labelTypeName.Text = "Type Name :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.Location = new System.Drawing.Point(92, 122);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(139, 22);
+            this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // FormTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelTypeName);
+            this.Controls.Add(this.labelId);
             this.Controls.Add(this.dataGridViewTypes);
-            this.Controls.Add(this.ShowTypesLabel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.buttonAdd);
             this.Name = "FormTypes";
             this.Text = "FormTypes";
             this.Load += new System.EventHandler(this.FormTypes_Load);
@@ -86,8 +132,12 @@ namespace CET301_Project.Forms
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label ShowTypesLabel;
+        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.DataGridView dataGridViewTypes;
+        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelTypeName;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

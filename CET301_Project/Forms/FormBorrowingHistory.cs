@@ -23,7 +23,7 @@ namespace CET301_Project.Forms
         {
             SqlCommand command = new SqlCommand();
             command.Connection = connectToDB;
-            command.CommandText = "SELECT * FROM types";
+            command.CommandText = "SELECT * FROM borrows";
 
             DataTable data = new DataTable();
 
