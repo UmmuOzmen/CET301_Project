@@ -61,5 +61,12 @@ namespace CET301_Project.Forms
             connectToDB.Close();
             DatabaseLoad();
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxId.Clear();
+            textBoxName.Clear();
+            textBoxSurname.Clear();
+        }
     }
 }

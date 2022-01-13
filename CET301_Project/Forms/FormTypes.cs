@@ -71,5 +71,11 @@ namespace CET301_Project.Forms
         {
 
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+        }
     }
 }

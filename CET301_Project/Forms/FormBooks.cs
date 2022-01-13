@@ -68,5 +68,16 @@ namespace CET301_Project.Forms
             connectToDB.Close();
             DatabaseLoad();
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxAuthorId.Clear();
+            textBoxName.Clear();
+            textBoxPageCount.Clear();
+            textBoxPoint.Clear();
+            textBoxTypeId.Clear();
+            textBoxıd.Clear();
+            
+        }
     }
 }

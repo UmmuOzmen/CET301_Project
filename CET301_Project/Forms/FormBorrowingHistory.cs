@@ -63,5 +63,65 @@ namespace CET301_Project.Forms
             connectToDB.Close();
             DatabaseLoad();
         }
+
+        private void labelId_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelStudentId_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelBookId_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTakenDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelBroughtdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxStudId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxBookId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerTaken_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerBrought_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxId.Clear();
+            textBoxBookId.Clear();
+            textBoxStudId.Clear();
+            dateTimePickerTaken.Value = DateTime.Now;
+            dateTimePickerBrought.Value = DateTime.Now;
+
+        }
     }
 }

@@ -56,7 +56,7 @@ namespace CET301_Project.Forms
             command.Parameters.AddWithValue("@name", textBoxName.Text);
             command.Parameters.AddWithValue("@surname", textBoxSurname.Text);
             command.Parameters.AddWithValue("@birthdate", textBoxBirthdate.Text);
-            command.Parameters.AddWithValue("@gender", textBoxGender.Text);
+            command.Parameters.AddWithValue("@gender", comboBox1.Text);
             command.Parameters.AddWithValue("@class", textBoxClass.Text);
             command.Parameters.AddWithValue("@point", textBoxPoint.Text);
             connectToDB.Open();
@@ -74,6 +74,23 @@ namespace CET301_Project.Forms
             command.ExecuteNonQuery();
             connectToDB.Close();
             DatabaseLoad();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxID.Clear();
+            textBoxBirthdate.Clear();
+            textBoxClass.Clear();
+            textBoxName.Clear();
+            textBoxPoint.Clear();
+            textBoxSurname.Clear();
+            comboBox1.Text = string.Empty;
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

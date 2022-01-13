@@ -39,6 +39,7 @@ namespace CET301_Project.Forms
             this.labelSurname = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthors)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,11 +140,24 @@ namespace CET301_Project.Forms
             this.textBoxSurname.Size = new System.Drawing.Size(155, 22);
             this.textBoxSurname.TabIndex = 4;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonClear.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonClear.Location = new System.Drawing.Point(312, 152);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 31);
+            this.buttonClear.TabIndex = 5;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // FormAuthors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 450);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.textBoxSurname);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.textBoxId);
@@ -175,5 +189,6 @@ namespace CET301_Project.Forms
         private System.Windows.Forms.Label labelSurname;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxSurname;
+        private System.Windows.Forms.Button buttonClear;
     }
 }

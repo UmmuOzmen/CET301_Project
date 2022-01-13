@@ -44,6 +44,7 @@ namespace CET301_Project.Forms
             this.textBoxAuthorId = new System.Windows.Forms.TextBox();
             this.labelTypeId = new System.Windows.Forms.Label();
             this.textBoxTypeId = new System.Windows.Forms.TextBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,11 +196,24 @@ namespace CET301_Project.Forms
             this.textBoxTypeId.Size = new System.Drawing.Size(124, 22);
             this.textBoxTypeId.TabIndex = 3;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonClear.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonClear.Location = new System.Drawing.Point(253, 171);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 33);
+            this.buttonClear.TabIndex = 4;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // FormBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1326, 450);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.textBoxTypeId);
             this.Controls.Add(this.textBoxAuthorId);
             this.Controls.Add(this.textBoxPoint);
@@ -241,5 +255,6 @@ namespace CET301_Project.Forms
         private System.Windows.Forms.TextBox textBoxAuthorId;
         private System.Windows.Forms.Label labelTypeId;
         private System.Windows.Forms.TextBox textBoxTypeId;
+        private System.Windows.Forms.Button buttonClear;
     }
 }

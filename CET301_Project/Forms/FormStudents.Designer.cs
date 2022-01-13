@@ -45,7 +45,8 @@ namespace CET301_Project.Forms
             this.textBoxPoint = new System.Windows.Forms.TextBox();
             this.textBoxClass = new System.Windows.Forms.TextBox();
             this.textBoxBirthdate = new System.Windows.Forms.TextBox();
-            this.textBoxGender = new System.Windows.Forms.TextBox();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -202,20 +203,38 @@ namespace CET301_Project.Forms
             this.textBoxBirthdate.Size = new System.Drawing.Size(100, 22);
             this.textBoxBirthdate.TabIndex = 3;
             // 
-            // textBoxGender
+            // buttonClear
             // 
-            this.textBoxGender.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxGender.Location = new System.Drawing.Point(100, 211);
-            this.textBoxGender.Name = "textBoxGender";
-            this.textBoxGender.Size = new System.Drawing.Size(100, 22);
-            this.textBoxGender.TabIndex = 3;
+            this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonClear.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonClear.Location = new System.Drawing.Point(298, 187);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 28);
+            this.buttonClear.TabIndex = 4;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "F",
+            "M"});
+            this.comboBox1.Location = new System.Drawing.Point(100, 209);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 24);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // FormStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 450);
-            this.Controls.Add(this.textBoxGender);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.textBoxBirthdate);
             this.Controls.Add(this.textBoxClass);
             this.Controls.Add(this.textBoxPoint);
@@ -259,6 +278,7 @@ namespace CET301_Project.Forms
         private System.Windows.Forms.TextBox textBoxPoint;
         private System.Windows.Forms.TextBox textBoxClass;
         private System.Windows.Forms.TextBox textBoxBirthdate;
-        private System.Windows.Forms.TextBox textBoxGender;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
