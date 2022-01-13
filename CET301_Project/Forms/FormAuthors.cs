@@ -55,7 +55,7 @@ namespace CET301_Project.Forms
         {
             string query = "DELETE FROM authors WHERE authorId=@authorId";
             command = new SqlCommand(query, connectToDB);
-            command.Parameters.AddWithValue("@authorId",Convert.ToInt32(textBoxId.Text));
+            command.Parameters.AddWithValue("@authorId",textBoxId.Text);
             connectToDB.Open();
             command.ExecuteNonQuery();
             connectToDB.Close();

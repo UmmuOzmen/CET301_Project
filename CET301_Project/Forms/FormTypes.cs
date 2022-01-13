@@ -56,6 +56,17 @@ namespace CET301_Project.Forms
             DatabaseLoad();
         }
 
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            string query = "DELETE FROM types WHERE typeId=@typeId";
+            command = new SqlCommand(query, connectToDB);
+            command.Parameters.AddWithValue("@typeId", textBox1.Text);
+            connectToDB.Open();
+            command.ExecuteNonQuery();
+            connectToDB.Close();
+            DatabaseLoad();
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 

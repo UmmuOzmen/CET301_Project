@@ -62,11 +62,11 @@ namespace CET301_Project.Forms
             // 
             this.dataGridViewBooks.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBooks.Location = new System.Drawing.Point(602, 101);
+            this.dataGridViewBooks.Location = new System.Drawing.Point(602, 84);
             this.dataGridViewBooks.Name = "dataGridViewBooks";
             this.dataGridViewBooks.RowHeadersWidth = 51;
             this.dataGridViewBooks.RowTemplate.Height = 24;
-            this.dataGridViewBooks.Size = new System.Drawing.Size(438, 311);
+            this.dataGridViewBooks.Size = new System.Drawing.Size(701, 328);
             this.dataGridViewBooks.TabIndex = 1;
             this.dataGridViewBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBooks_CellContentClick);
             // 
@@ -79,6 +79,7 @@ namespace CET301_Project.Forms
             this.buttonDelete.TabIndex = 0;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // labelId
             // 

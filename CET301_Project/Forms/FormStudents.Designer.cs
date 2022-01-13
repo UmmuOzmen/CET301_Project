@@ -70,6 +70,7 @@ namespace CET301_Project.Forms
             this.dataGridViewStudents.Name = "dataGridViewStudents";
             this.dataGridViewStudents.RowHeadersWidth = 51;
             this.dataGridViewStudents.RowTemplate.Height = 24;
+            this.dataGridViewStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewStudents.Size = new System.Drawing.Size(756, 295);
             this.dataGridViewStudents.TabIndex = 1;
             // 
@@ -82,6 +83,7 @@ namespace CET301_Project.Forms
             this.Delete.TabIndex = 0;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // labelSId
             // 

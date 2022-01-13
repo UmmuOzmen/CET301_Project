@@ -57,5 +57,16 @@ namespace CET301_Project.Forms
             connectToDB.Close();
             DatabaseLoad();
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            string query = "DELETE FROM books WHERE bookId=@bookId";
+            command = new SqlCommand(query, connectToDB);
+            command.Parameters.AddWithValue("@bookId", textBoxıd.Text);
+            connectToDB.Open();
+            command.ExecuteNonQuery();
+            connectToDB.Close();
+            DatabaseLoad();
+        }
     }
 }

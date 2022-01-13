@@ -64,6 +64,17 @@ namespace CET301_Project.Forms
             connectToDB.Close();
             DatabaseLoad();
         }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            string query = "DELETE FROM students WHERE studentId=@studentId";
+            command = new SqlCommand(query, connectToDB);
+            command.Parameters.AddWithValue("@studentId", textBoxID.Text);
+            connectToDB.Open();
+            command.ExecuteNonQuery();
+            connectToDB.Close();
+            DatabaseLoad();
+        }
     }
     }
 

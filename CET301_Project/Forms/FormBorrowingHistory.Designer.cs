@@ -150,6 +150,7 @@ namespace CET301_Project.Forms
             this.buttondelete.TabIndex = 3;
             this.buttondelete.Text = "Delete";
             this.buttondelete.UseVisualStyleBackColor = true;
+            this.buttondelete.Click += new System.EventHandler(this.buttondelete_Click);
             // 
             // dateTimePickerTaken
             // 

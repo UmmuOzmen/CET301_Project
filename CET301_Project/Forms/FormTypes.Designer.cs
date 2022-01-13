@@ -59,6 +59,7 @@ namespace CET301_Project.Forms
             this.dataGridViewTypes.Name = "dataGridViewTypes";
             this.dataGridViewTypes.RowHeadersWidth = 51;
             this.dataGridViewTypes.RowTemplate.Height = 24;
+            this.dataGridViewTypes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTypes.Size = new System.Drawing.Size(343, 345);
             this.dataGridViewTypes.TabIndex = 2;
             // 

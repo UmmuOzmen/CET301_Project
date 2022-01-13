@@ -98,7 +98,6 @@ namespace CET301_Project.Forms
             // textBoxId
             // 
             this.textBoxId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxId.Enabled = false;
             this.textBoxId.Location = new System.Drawing.Point(134, 64);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(155, 22);

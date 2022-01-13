@@ -52,5 +52,16 @@ namespace CET301_Project.Forms
             connectToDB.Close();
             DatabaseLoad();
         }
+
+        private void buttondelete_Click(object sender, EventArgs e)
+        {
+            string query = "DELETE FROM borrows WHERE borrowId=@borrowId";
+            command = new SqlCommand(query, connectToDB);
+            command.Parameters.AddWithValue("@borrowId", textBoxId.Text);
+            connectToDB.Open();
+            command.ExecuteNonQuery();
+            connectToDB.Close();
+            DatabaseLoad();
+        }
     }
 }
