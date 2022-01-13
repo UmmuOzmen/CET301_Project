@@ -29,7 +29,7 @@ namespace CET301_Project.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonAdd = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewTypes = new System.Windows.Forms.DataGridView();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.labelId = new System.Windows.Forms.Label();
@@ -39,16 +39,16 @@ namespace CET301_Project.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTypes)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonAdd
+            // button1
             // 
-            this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAdd.Location = new System.Drawing.Point(261, 91);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(97, 23);
-            this.buttonAdd.TabIndex = 0;
-            this.buttonAdd.Text = "Add";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Location = new System.Drawing.Point(261, 91);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewTypes
             // 
@@ -59,7 +59,7 @@ namespace CET301_Project.Forms
             this.dataGridViewTypes.Name = "dataGridViewTypes";
             this.dataGridViewTypes.RowHeadersWidth = 51;
             this.dataGridViewTypes.RowTemplate.Height = 24;
-            this.dataGridViewTypes.Size = new System.Drawing.Size(280, 345);
+            this.dataGridViewTypes.Size = new System.Drawing.Size(343, 345);
             this.dataGridViewTypes.TabIndex = 2;
             // 
             // buttonDelete
@@ -120,7 +120,7 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.dataGridViewTypes);
             this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.button1);
             this.Name = "FormTypes";
             this.Text = "FormTypes";
             this.Load += new System.EventHandler(this.FormTypes_Load);
@@ -132,7 +132,7 @@ namespace CET301_Project.Forms
 
         #endregion
 
-        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridViewTypes;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Label labelId;

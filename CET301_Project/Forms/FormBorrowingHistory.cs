@@ -19,9 +19,10 @@ namespace CET301_Project.Forms
         }
         SqlConnection connectToDB = new SqlConnection("Data Source=DESKTOP-178E3AR;Initial Catalog=library;Integrated Security=True");
 
-        private void FormBorrow_Load(object sender, EventArgs e)
+        SqlCommand command;
+        void DatabaseLoad()
         {
-            SqlCommand command = new SqlCommand();
+            command = new SqlCommand();
             command.Connection = connectToDB;
             command.CommandText = "SELECT * FROM borrows";
 
@@ -31,6 +32,26 @@ namespace CET301_Project.Forms
             adapter.Fill(data);
 
             dataGridViewBorrows.DataSource = data;
+        }
+
+        private void FormBorrow_Load(object sender, EventArgs e)
+        {
+            DatabaseLoad();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            string query = "INSERT INTO books(borrowId,studentId,bookId,takenDate,broughtDate) VALUES (@borrowId,@studentId,@bookId,@takenDate,@broughtDate)";
+            command = new SqlCommand(query, connectToDB);
+            command.Parameters.AddWithValue("@borrowId", textBoxId.Text);
+            command.Parameters.AddWithValue("@studentId", textBoxStudId.Text);
+            command.Parameters.AddWithValue("@bookId", textBoxBookId.Text);
+            command.Parameters.AddWithValue("@takenDate", dateTimePickerTaken.Value);
+            command.Parameters.AddWithValue("@broughtDate", dateTimePickerBrought.Value);
+            connectToDB.Open();
+            command.ExecuteNonQuery();
+            connectToDB.Close();
+            DatabaseLoad();
         }
     }
 }

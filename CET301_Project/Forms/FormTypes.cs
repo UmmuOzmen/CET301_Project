@@ -14,26 +14,18 @@ namespace CET301_Project.Forms
     public partial class FormTypes : Form
     {
         
+        
         public FormTypes()
         {
             InitializeComponent();
+           
         }
         SqlConnection connectToDB = new SqlConnection("Data Source=DESKTOP-178E3AR;Initial Catalog=library;Integrated Security=True");
-    
 
-        private void label1_Click(object sender, EventArgs e)
+        SqlCommand command;
+        void DatabaseLoad()
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-      
-        }
-
-        private void FormTypes_Load(object sender, EventArgs e)
-        {
-            SqlCommand command = new SqlCommand();
+            command = new SqlCommand();
             command.Connection = connectToDB;
             command.CommandText = "SELECT * FROM types";
 
@@ -43,7 +35,25 @@ namespace CET301_Project.Forms
             adapter.Fill(data);
 
             dataGridViewTypes.DataSource = data;
+        }
 
+
+
+
+        private void FormTypes_Load(object sender, EventArgs e)
+        {
+            DatabaseLoad();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string query = "INSERT INTO types(name) VALUES (@name)";
+            command = new SqlCommand(query, connectToDB);
+            command.Parameters.AddWithValue("@name", textBox2.Text);
+            connectToDB.Open();
+            command.ExecuteNonQuery();
+            connectToDB.Close();
+            DatabaseLoad();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

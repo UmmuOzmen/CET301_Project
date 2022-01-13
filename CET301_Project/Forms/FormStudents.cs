@@ -18,10 +18,10 @@ namespace CET301_Project.Forms
             InitializeComponent();
         }
         SqlConnection connectToDB = new SqlConnection("Data Source=DESKTOP-178E3AR;Initial Catalog=library;Integrated Security=True");
-
-        private void FormStudents_Load(object sender, EventArgs e)
+        SqlCommand command;
+        void DatabaseLoad()
         {
-            SqlCommand command = new SqlCommand();
+            command = new SqlCommand();
             command.Connection = connectToDB;
             command.CommandText = "SELECT * FROM students";
 
@@ -33,6 +33,12 @@ namespace CET301_Project.Forms
             dataGridViewStudents.DataSource = data;
         }
 
+
+        private void FormStudents_Load(object sender, EventArgs e)
+        {
+            DatabaseLoad();
+        }
+
         private void labelBirthDate_Click(object sender, EventArgs e)
         {
 
@@ -42,5 +48,22 @@ namespace CET301_Project.Forms
         {
 
         }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            string query = "INSERT INTO students(name, surname,birthdate, gender,class, point) VALUES (@name,@surname,@birthdate,@gender,@class,@point)";
+            command = new SqlCommand(query, connectToDB);
+            command.Parameters.AddWithValue("@name", textBoxName.Text);
+            command.Parameters.AddWithValue("@surname", textBoxSurname.Text);
+            command.Parameters.AddWithValue("@birthdate", textBoxBirthdate.Text);
+            command.Parameters.AddWithValue("@gender", textBoxGender.Text);
+            command.Parameters.AddWithValue("@class", textBoxClass.Text);
+            command.Parameters.AddWithValue("@point", textBoxPoint.Text);
+            connectToDB.Open();
+            command.ExecuteNonQuery();
+            connectToDB.Close();
+            DatabaseLoad();
+        }
     }
-}
+    }
+

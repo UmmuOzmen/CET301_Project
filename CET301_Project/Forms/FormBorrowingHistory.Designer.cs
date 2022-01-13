@@ -36,12 +36,12 @@ namespace CET301_Project.Forms
             this.labelBookId = new System.Windows.Forms.Label();
             this.labelTakenDate = new System.Windows.Forms.Label();
             this.labelBroughtdate = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxStudId = new System.Windows.Forms.TextBox();
+            this.textBoxBookId = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttondelete = new System.Windows.Forms.Button();
+            this.dateTimePickerTaken = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerBrought = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBorrows)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,37 +114,21 @@ namespace CET301_Project.Forms
             this.labelBroughtdate.Text = "Brought Date :";
             this.labelBroughtdate.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // textBox1
+            // textBoxStudId
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(142, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBoxStudId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxStudId.Location = new System.Drawing.Point(142, 57);
+            this.textBoxStudId.Name = "textBoxStudId";
+            this.textBoxStudId.Size = new System.Drawing.Size(127, 22);
+            this.textBoxStudId.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxBookId
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(142, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(127, 22);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(142, 111);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 22);
-            this.textBox3.TabIndex = 1;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(142, 138);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(127, 22);
-            this.textBox4.TabIndex = 1;
+            this.textBoxBookId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxBookId.Location = new System.Drawing.Point(142, 84);
+            this.textBoxBookId.Name = "textBoxBookId";
+            this.textBoxBookId.Size = new System.Drawing.Size(127, 22);
+            this.textBoxBookId.TabIndex = 1;
             // 
             // buttonAdd
             // 
@@ -155,6 +139,7 @@ namespace CET301_Project.Forms
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttondelete
             // 
@@ -166,11 +151,29 @@ namespace CET301_Project.Forms
             this.buttondelete.Text = "Delete";
             this.buttondelete.UseVisualStyleBackColor = true;
             // 
+            // dateTimePickerTaken
+            // 
+            this.dateTimePickerTaken.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerTaken.Location = new System.Drawing.Point(142, 112);
+            this.dateTimePickerTaken.Name = "dateTimePickerTaken";
+            this.dateTimePickerTaken.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePickerTaken.TabIndex = 4;
+            // 
+            // dateTimePickerBrought
+            // 
+            this.dateTimePickerBrought.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerBrought.Location = new System.Drawing.Point(142, 140);
+            this.dateTimePickerBrought.Name = "dateTimePickerBrought";
+            this.dateTimePickerBrought.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePickerBrought.TabIndex = 5;
+            // 
             // FormBorrowingHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 450);
+            this.Controls.Add(this.dateTimePickerBrought);
+            this.Controls.Add(this.dateTimePickerTaken);
             this.Controls.Add(this.buttondelete);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.labelBroughtdate);
@@ -178,10 +181,8 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.labelBookId);
             this.Controls.Add(this.labelStudentId);
             this.Controls.Add(this.labelId);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxBookId);
+            this.Controls.Add(this.textBoxStudId);
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.dataGridViewBorrows);
             this.Name = "FormBorrowingHistory";
@@ -202,11 +203,11 @@ namespace CET301_Project.Forms
         private System.Windows.Forms.Label labelBookId;
         private System.Windows.Forms.Label labelTakenDate;
         private System.Windows.Forms.Label labelBroughtdate;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxStudId;
+        private System.Windows.Forms.TextBox textBoxBookId;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttondelete;
+        private System.Windows.Forms.DateTimePicker dateTimePickerTaken;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBrought;
     }
 }

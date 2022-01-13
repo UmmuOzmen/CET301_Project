@@ -51,16 +51,19 @@ namespace CET301_Project.Forms
             this.Add.TabIndex = 0;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // dataGridViewAuthors
             // 
             this.dataGridViewAuthors.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewAuthors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAuthors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAuthors.Location = new System.Drawing.Point(407, 61);
             this.dataGridViewAuthors.Name = "dataGridViewAuthors";
             this.dataGridViewAuthors.RowHeadersWidth = 51;
             this.dataGridViewAuthors.RowTemplate.Height = 24;
-            this.dataGridViewAuthors.Size = new System.Drawing.Size(497, 377);
+            this.dataGridViewAuthors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewAuthors.Size = new System.Drawing.Size(462, 377);
             this.dataGridViewAuthors.TabIndex = 1;
             // 
             // Delete
@@ -72,6 +75,7 @@ namespace CET301_Project.Forms
             this.Delete.TabIndex = 0;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // label1
             // 
@@ -94,6 +98,7 @@ namespace CET301_Project.Forms
             // textBoxId
             // 
             this.textBoxId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxId.Enabled = false;
             this.textBoxId.Location = new System.Drawing.Point(134, 64);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(155, 22);
