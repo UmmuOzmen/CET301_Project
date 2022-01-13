@@ -63,6 +63,16 @@ namespace CET301_Project.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_en_0 {
+            get {
+                object obj = ResourceManager.GetObject("logo-en_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap types {
             get {
                 object obj = ResourceManager.GetObject("types", resourceCulture);
