@@ -41,9 +41,8 @@ namespace CET301_Project.Forms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO books(borrowId,studentId,bookId,takenDate,broughtDate) VALUES (@borrowId,@studentId,@bookId,@takenDate,@broughtDate)";
+            string query = "INSERT INTO borrows(studentId,bookId,takenDate,broughtDate) VALUES (@studentId,@bookId,@takenDate,@broughtDate)";
             command = new SqlCommand(query, connectToDB);
-            command.Parameters.AddWithValue("@borrowId", textBoxId.Text);
             command.Parameters.AddWithValue("@studentId", textBoxStudId.Text);
             command.Parameters.AddWithValue("@bookId", textBoxBookId.Text);
             command.Parameters.AddWithValue("@takenDate", dateTimePickerTaken.Value);
