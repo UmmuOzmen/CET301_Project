@@ -64,6 +64,31 @@ namespace CET301_Project.Forms
             DatabaseLoad();
         }
 
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxId.Clear();
+            textBoxBookId.Clear();
+            textBoxStudId.Clear();
+            dateTimePickerTaken.Value = DateTime.Now;
+            dateTimePickerBrought.Value = DateTime.Now;
+
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            string query = "UPDATE borrows SET studentId=@studentId,bookId=@bookId,takenDate=@takenDate,broughtDate=@broughtDate WHERE borrowId=@borrowId";
+            command = new SqlCommand(query, connectToDB);
+            command.Parameters.AddWithValue("@borrowId", textBoxId.Text);
+            command.Parameters.AddWithValue("@studentId", textBoxStudId.Text);
+            command.Parameters.AddWithValue("@bookId", textBoxBookId.Text);
+            command.Parameters.AddWithValue("@takenDate", dateTimePickerTaken.Value);
+            command.Parameters.AddWithValue("@broughtDate", dateTimePickerBrought.Value);
+            connectToDB.Open();
+            command.ExecuteNonQuery();
+            connectToDB.Close();
+            DatabaseLoad();
+        }
+
         private void labelId_Click(object sender, EventArgs e)
         {
 
@@ -114,14 +139,13 @@ namespace CET301_Project.Forms
 
         }
 
-        private void buttonClear_Click(object sender, EventArgs e)
+        private void dataGridViewBorrows_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            textBoxId.Clear();
-            textBoxBookId.Clear();
-            textBoxStudId.Clear();
-            dateTimePickerTaken.Value = DateTime.Now;
-            dateTimePickerBrought.Value = DateTime.Now;
-
+            textBoxId.Text = dataGridViewBorrows.CurrentRow.Cells[0].Value.ToString();
+            textBoxStudId.Text = dataGridViewBorrows.CurrentRow.Cells[1].Value.ToString();
+            textBoxBookId.Text = dataGridViewBorrows.CurrentRow.Cells[2].Value.ToString();
+            dateTimePickerTaken.Text = dataGridViewBorrows.CurrentRow.Cells[3].Value.ToString();
+            dateTimePickerBrought.Text = dataGridViewBorrows.CurrentRow.Cells[4].Value.ToString();
         }
     }
 }

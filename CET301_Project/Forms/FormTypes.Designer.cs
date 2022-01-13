@@ -37,6 +37,7 @@ namespace CET301_Project.Forms
             this.labelTypeName = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTypes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +64,7 @@ namespace CET301_Project.Forms
             this.dataGridViewTypes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTypes.Size = new System.Drawing.Size(343, 345);
             this.dataGridViewTypes.TabIndex = 2;
+            this.dataGridViewTypes.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTypes_CellEnter);
             // 
             // buttonDelete
             // 
@@ -123,11 +125,23 @@ namespace CET301_Project.Forms
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonUpdate.Location = new System.Drawing.Point(261, 149);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(97, 24);
+            this.buttonUpdate.TabIndex = 6;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
             // FormTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -137,7 +151,7 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.button1);
             this.Name = "FormTypes";
-            this.Text = "FormTypes";
+            this.Text = "Types";
             this.Load += new System.EventHandler(this.FormTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTypes)).EndInit();
             this.ResumeLayout(false);
@@ -155,5 +169,6 @@ namespace CET301_Project.Forms
         private System.Windows.Forms.Label labelTypeName;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }

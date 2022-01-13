@@ -77,5 +77,23 @@ namespace CET301_Project.Forms
             textBox1.Clear();
             textBox2.Clear();
         }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            string query = "UPDATE types SET name = @name WHERE typeId=@typeId";
+            command = new SqlCommand(query, connectToDB);
+            command.Parameters.AddWithValue("@typeId", textBox1.Text);
+            command.Parameters.AddWithValue("@name", textBox2.Text);
+            connectToDB.Open();
+            command.ExecuteNonQuery();
+            connectToDB.Close();
+            DatabaseLoad();
+        }
+
+        private void dataGridViewTypes_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox1.Text = dataGridViewTypes.CurrentRow.Cells[0].Value.ToString();
+            textBox2.Text = dataGridViewTypes.CurrentRow.Cells[1].Value.ToString();
+        }
     }
 }

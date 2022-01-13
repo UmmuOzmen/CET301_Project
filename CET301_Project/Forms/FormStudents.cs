@@ -92,6 +92,36 @@ namespace CET301_Project.Forms
         {
 
         }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            string query = "UPDATE students SET name=@name,surname=@surname,birthdate=@birthdate,gender=@gender,class=@class,point=@point WHERE  studentId=@studentId";
+            command = new SqlCommand(query, connectToDB);
+            command.Parameters.AddWithValue("@name", textBoxName.Text);
+            command.Parameters.AddWithValue("@surname", textBoxSurname.Text);
+            command.Parameters.AddWithValue("@birthdate", textBoxBirthdate.Text);
+            command.Parameters.AddWithValue("@gender", comboBox1.Text);
+            command.Parameters.AddWithValue("@class", textBoxClass.Text);
+            command.Parameters.AddWithValue("@point", textBoxPoint.Text);
+            command.Parameters.AddWithValue("@studentId", textBoxID.Text);
+
+            connectToDB.Open();
+            command.ExecuteNonQuery();
+            connectToDB.Close();
+            DatabaseLoad();
+        }
+
+        private void dataGridViewStudents_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxID.Text = dataGridViewStudents.CurrentRow.Cells[0].Value.ToString();
+            textBoxName.Text = dataGridViewStudents.CurrentRow.Cells[1].Value.ToString();
+            textBoxSurname.Text = dataGridViewStudents.CurrentRow.Cells[2].Value.ToString();
+            textBoxBirthdate.Text = dataGridViewStudents.CurrentRow.Cells[3].Value.ToString();
+            comboBox1.Text = dataGridViewStudents.CurrentRow.Cells[4].Value.ToString();
+            textBoxClass.Text = dataGridViewStudents.CurrentRow.Cells[5].Value.ToString();
+            textBoxPoint.Text = dataGridViewStudents.CurrentRow.Cells[6].Value.ToString();
+        }
     }
     }
+    
 

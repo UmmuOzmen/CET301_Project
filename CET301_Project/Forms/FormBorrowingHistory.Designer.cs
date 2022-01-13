@@ -43,6 +43,7 @@ namespace CET301_Project.Forms
             this.dateTimePickerTaken = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerBrought = new System.Windows.Forms.DateTimePicker();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBorrows)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@ namespace CET301_Project.Forms
             this.dataGridViewBorrows.RowTemplate.Height = 24;
             this.dataGridViewBorrows.Size = new System.Drawing.Size(758, 389);
             this.dataGridViewBorrows.TabIndex = 0;
+            this.dataGridViewBorrows.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBorrows_CellEnter);
             // 
             // textBoxId
             // 
@@ -191,11 +193,23 @@ namespace CET301_Project.Forms
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonUpdate.Location = new System.Drawing.Point(324, 93);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(106, 23);
+            this.buttonUpdate.TabIndex = 7;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
             // FormBorrowingHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 450);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.dateTimePickerBrought);
             this.Controls.Add(this.dateTimePickerTaken);
@@ -211,7 +225,7 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.dataGridViewBorrows);
             this.Name = "FormBorrowingHistory";
-            this.Text = "FormBorrowingHistory";
+            this.Text = "Borrowing History";
             this.Load += new System.EventHandler(this.FormBorrow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBorrows)).EndInit();
             this.ResumeLayout(false);
@@ -235,5 +249,6 @@ namespace CET301_Project.Forms
         private System.Windows.Forms.DateTimePicker dateTimePickerTaken;
         private System.Windows.Forms.DateTimePicker dateTimePickerBrought;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }

@@ -47,6 +47,7 @@ namespace CET301_Project.Forms
             this.textBoxBirthdate = new System.Windows.Forms.TextBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@ namespace CET301_Project.Forms
             // dataGridViewStudents
             // 
             this.dataGridViewStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridViewStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewStudents.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStudents.Location = new System.Drawing.Point(397, 95);
@@ -74,6 +75,7 @@ namespace CET301_Project.Forms
             this.dataGridViewStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewStudents.Size = new System.Drawing.Size(756, 295);
             this.dataGridViewStudents.TabIndex = 1;
+            this.dataGridViewStudents.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudents_CellEnter);
             // 
             // Delete
             // 
@@ -228,11 +230,23 @@ namespace CET301_Project.Forms
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonUpdate.Location = new System.Drawing.Point(278, 154);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(113, 23);
+            this.buttonUpdate.TabIndex = 6;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
             // FormStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 450);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.textBoxBirthdate);
@@ -252,7 +266,7 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Add);
             this.Name = "FormStudents";
-            this.Text = "FormStudents";
+            this.Text = "Students";
             this.Load += new System.EventHandler(this.FormStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).EndInit();
             this.ResumeLayout(false);
@@ -280,5 +294,6 @@ namespace CET301_Project.Forms
         private System.Windows.Forms.TextBox textBoxBirthdate;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }

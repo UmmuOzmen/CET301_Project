@@ -45,6 +45,7 @@ namespace CET301_Project.Forms
             this.labelTypeId = new System.Windows.Forms.Label();
             this.textBoxTypeId = new System.Windows.Forms.TextBox();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +71,7 @@ namespace CET301_Project.Forms
             this.dataGridViewBooks.Size = new System.Drawing.Size(701, 328);
             this.dataGridViewBooks.TabIndex = 1;
             this.dataGridViewBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBooks_CellContentClick);
+            this.dataGridViewBooks.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBooks_CellEnter);
             // 
             // buttonDelete
             // 
@@ -208,11 +210,23 @@ namespace CET301_Project.Forms
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonUpdate.Location = new System.Drawing.Point(245, 142);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(90, 23);
+            this.buttonUpdate.TabIndex = 5;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
             // FormBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1326, 450);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.textBoxTypeId);
             this.Controls.Add(this.textBoxAuthorId);
@@ -230,7 +244,7 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
             this.Name = "FormBooks";
-            this.Text = "FormBooks";
+            this.Text = "Books";
             this.Load += new System.EventHandler(this.FormBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).EndInit();
             this.ResumeLayout(false);
@@ -256,5 +270,6 @@ namespace CET301_Project.Forms
         private System.Windows.Forms.Label labelTypeId;
         private System.Windows.Forms.TextBox textBoxTypeId;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }

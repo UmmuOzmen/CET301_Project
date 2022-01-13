@@ -40,6 +40,7 @@ namespace CET301_Project.Forms
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthors)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@ namespace CET301_Project.Forms
             this.dataGridViewAuthors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewAuthors.Size = new System.Drawing.Size(462, 377);
             this.dataGridViewAuthors.TabIndex = 1;
+            this.dataGridViewAuthors.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAuthors_CellEnter);
             // 
             // Delete
             // 
@@ -103,6 +105,7 @@ namespace CET301_Project.Forms
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(155, 22);
             this.textBoxId.TabIndex = 4;
+            this.textBoxId.TextChanged += new System.EventHandler(this.textBoxId_TextChanged);
             // 
             // labelName
             // 
@@ -144,7 +147,7 @@ namespace CET301_Project.Forms
             // 
             this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonClear.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonClear.Location = new System.Drawing.Point(312, 152);
+            this.buttonClear.Location = new System.Drawing.Point(315, 174);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 31);
             this.buttonClear.TabIndex = 5;
@@ -152,11 +155,23 @@ namespace CET301_Project.Forms
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonUpdate.Location = new System.Drawing.Point(301, 134);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(100, 34);
+            this.buttonUpdate.TabIndex = 6;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
             // FormAuthors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 450);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.textBoxSurname);
             this.Controls.Add(this.textBoxName);
@@ -169,7 +184,7 @@ namespace CET301_Project.Forms
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Add);
             this.Name = "FormAuthors";
-            this.Text = "FormAuthors";
+            this.Text = "Authors";
             this.Load += new System.EventHandler(this.FormAuthors_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthors)).EndInit();
             this.ResumeLayout(false);
@@ -190,5 +205,6 @@ namespace CET301_Project.Forms
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxSurname;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }
